@@ -1,2 +1,2 @@
-# httpxx
-a simple interface for the proxygen http library
+# common
+Common elements shared between marinatb components
