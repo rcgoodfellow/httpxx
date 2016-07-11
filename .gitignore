@@ -34,3 +34,14 @@ build
 *.sw*
 
 obj-x86_64-linux-gnu
+
+debian/*
+!/debian/rules
+!/debian/control
+!/debian/libhttpxx.install
+!/debian/libhttpxx-dev.install
+!/debian/changelog
+!/debian/compat
+!/debian/copyright
+!/debian/source
+!/debian/README.Debian
