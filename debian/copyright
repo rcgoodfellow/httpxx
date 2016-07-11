@@ -3,7 +3,7 @@ Upstream-Name: httpxx
 Source: https://github.com/rcgoodfellow/httpxx
 
 Files: *
-Copyright: Ryan Goodfellow <rcgoodfellow@gmail.com>
+Copyright: 2016 Ryan Goodfellow <rcgoodfellow@gmail.com>
 License:   Apache-2.0
 
 License:   Apache-2.0
