@@ -16,7 +16,7 @@ Section: libs
 Architecture: amd64
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, libproxygen
 Description: Simple interface for the Proxygen HTTP library
  This library makes accessing the performance of the Proxygen HTTP library
  very accessible via C++14.
@@ -26,7 +26,7 @@ Section: libdevel
 Architecture: amd64
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libhttpxx (= ${binary:Version}), ${misc:Depends}
+Depends: libhttpxx (= ${binary:Version}), ${misc:Depends}, libproxygen-dev
 Description: Simple interface for the Proxygen HTTP library
  This library makes accessing the performance of the Proxygen HTTP library
  very accessible via C++14.
