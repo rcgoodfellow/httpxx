@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# http++ build file
+# httpxx build file
 #
 # a simple interface for the proxygen http library
 #
@@ -8,14 +8,14 @@
 # setup ........................................................................
 
 cmake_minimum_required(VERSION 3.0)
-project(http++)
+project(httpxx)
 
 set(BUILD_SHARED_LIBS ON)
 
 set(CMAKE_MODULE_PATH
   ${CMAKE_MODULE_PATH}
-  "${http++_SOURCE_DIR}/cmake"
-  "/usr/local/lib/cmake")
+  "${httpxx_SOURCE_DIR}/cmake"
+  "/usr/lib/cmake")
 
 set( CMAKE_C_FLAGS
   "${CMAKE_C_FLAGS} \
@@ -37,18 +37,18 @@ set( CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3" )
 set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} \
   -g -O0 -fno-optimize-sibling-calls -fno-omit-frame-pointer" )
 
-include_directories( "${http++_SOURCE_DIR}" )
+include_directories( "${httpxx_SOURCE_DIR}" )
 
 # build ........................................................................
 
-add_library( http++
+add_library( httpxx
   http_request.cxx
   http_server.cxx
   proto.cxx
   glog.cxx
 )
 
-target_link_libraries( http++
+target_link_libraries( httpxx
   proxygenhttpserver
   proxygenlib
   wangle
@@ -66,9 +66,9 @@ target_link_libraries( http++
 )
 
 add_executable ( doorbell doorbell.cxx )
-target_link_libraries( doorbell http++ )
+target_link_libraries( doorbell httpxx )
 
-install(TARGETS http++ LIBRARY DESTINATION lib)
-install(DIRECTORY ./ DESTINATION include/http++ 
+install(TARGETS httpxx LIBRARY DESTINATION lib)
+install(DIRECTORY ./ DESTINATION include/httpxx 
   FILES_MATCHING PATTERN "*.hxx"
   PATTERN "build" EXCLUDE)

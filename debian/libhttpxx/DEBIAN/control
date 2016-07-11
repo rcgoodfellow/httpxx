@@ -1,0 +1,14 @@
+Package: libhttpxx
+Source: httpxx
+Version: 0
+Architecture: amd64
+Maintainer: Ryan Goodfellow <rgoodfel@isi.edu>
+Installed-Size: 290
+Depends: libc6 (>= 2.14), libfolly57, libgcc1 (>= 1:3.0), libgoogle-glog0v5, libproxygen, libstdc++6 (>= 5.2)
+Section: libs
+Priority: extra
+Multi-Arch: same
+Homepage: https://github.com/rcgoodfellow/httpxx
+Description: A simple interface for the Proxygen HTTP library
+ This library makes accessing the performance of the Proxygen HTTP library
+ very accessible via C++14.

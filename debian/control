@@ -1,0 +1,32 @@
+Source: httpxx
+Section: libs
+Priority: extra
+Maintainer: Ryan Goodfellow <rgoodfel@isi.edu>
+Build-Depends: libproxygen-dev,
+               cmake,
+               ninja-build,
+               make (>=4),
+               g++ (>=5),
+               debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/rcgoodfellow/httpxx
+
+Package: libhttpxx
+Section: libs
+Architecture: amd64
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: A simple interface for the Proxygen HTTP library
+ This library makes accessing the performance of the Proxygen HTTP library
+ very accessible via C++14.
+
+Package: libhttpxx-dev
+Section: libdevel
+Architecture: amd64
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libhttpxx (= ${binary:Version}), ${misc:Depends}
+Description: A simple interface for the Proxygen HTTP library
+ This library makes accessing the performance of the Proxygen HTTP library
+ very accessible via C++14.

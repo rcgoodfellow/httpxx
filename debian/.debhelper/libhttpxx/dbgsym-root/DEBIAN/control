@@ -1,0 +1,14 @@
+Package: libhttpxx-dbgsym
+Source: httpxx
+Version: 0
+Architecture: amd64
+Maintainer: Ryan Goodfellow <rgoodfel@isi.edu>
+Installed-Size: 1238
+Depends: libhttpxx (= 0)
+Section: debug
+Priority: extra
+Multi-Arch: same
+Homepage: https://github.com/rcgoodfellow/httpxx
+Description: Debug symbols for libhttpxx
+Auto-Built-Package: debug-symbols
+Build-Ids: bd60a98be8ca009e11c41e6098b9e9630ba2b43b
