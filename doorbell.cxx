@@ -11,18 +11,18 @@ using namespace std;
 
 int main()
 {
-  cout << "hewow" << endl; 
+  cout << "ding" << endl; 
   atomic<bool> server_ready{false};
   
   thread t{[&server_ready](){
     SSLContextConfig sslc;
     sslc.setCertificate(
-        "leaf_cert.pem",
-        "leaf_key.pem",
+        "door_cert.pem",
+        "door_key.pem",
         "" //no password on cert
     );
 
-    HttpsServer srv("localhost", 4433, sslc);
+    HttpsServer srv("127.0.0.1", 4433, sslc);
     srv.onPost("/ding", [](http::Message) {
         return http::Response{
           http::Status::OK(),
@@ -36,12 +36,16 @@ int main()
   }};
   t.detach();
 
+  sleep(1);
+
+  //TODO this dosen't actually work, need a real indication from
+  //srv as to when it is ready
   while(!server_ready) usleep(50);
 
   HttpRequest req{
     HTTPMethod::POST,
-    "https://localhost:4433/ding",
-    "hewow"
+    "https://127.0.0.1:4433/ding",
+    "ding"
   };
 
   cout << req.response().get().bodyAsString() << endl;

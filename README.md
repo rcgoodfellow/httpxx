@@ -1,2 +1,1 @@
-# common
-Common elements shared between marinatb components
+A simple interface for the Proxygen HTTP library

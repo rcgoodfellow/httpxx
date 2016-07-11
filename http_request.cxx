@@ -1,11 +1,12 @@
 #include "http_request.hxx"
 #include <proxygen/lib/http/HTTPMessage.h>
-#include <proxygen/lib/ssl/SSLContextConfig.h>
+#include <wangle/ssl/SSLContextConfig.h>
 #include <proxygen/lib/http/session/HTTPUpstreamSession.h>
 #include <proxygen/lib/utils/URL.h>
 
 using namespace folly;
 using namespace proxygen;
+using wangle::SSLContextConfig;
 using namespace std;
 using namespace std::chrono;
 using namespace marina;
