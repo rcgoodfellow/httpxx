@@ -6,7 +6,7 @@ Build-Depends: libproxygen-dev,
                cmake,
                ninja-build,
                make (>=4),
-               g++ (>=5),
+               g++ (>=4.9),
                debhelper (>=9)
 Standards-Version: 3.9.8
 Homepage: https://github.com/rcgoodfellow/httpxx
